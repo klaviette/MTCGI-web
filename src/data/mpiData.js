@@ -3,13 +3,13 @@ const mpiData = [
     id: 1,
     question: 'Pokémon',
     answer:
-      'Placeholder for the Pokémon Index.',
+      'Pokémon Market Index',
   },
   {
     id: 2,
     question: "One Piece",
     answer:
-      "Placeholder for the One Piece Index.",
+      "One piece Market Index",
   },
   {
     id: 3,

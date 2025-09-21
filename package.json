@@ -12,9 +12,12 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
     "@tcgdex/sdk": "^2.7.1",
+    "chart.js": "^4.5.0",
     "firebase": "^12.2.1",
     "react": "^19.1.1",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.1.1",
+    "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {

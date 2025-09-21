@@ -1,6 +1,5 @@
 import React, {useRef} from 'react'
-
-const MpiItems = ({item, onClick, isOpen}) => {
+const MpiItems = ({item, onClick, isOpen, children}) => {
   
   const answerRef = useRef(null)
 
@@ -32,16 +31,17 @@ const MpiItems = ({item, onClick, isOpen}) => {
       </div>
     </button>
     <div className='overflow-hidden
-    transition-all duration-200 ease-out' 
+    transition-all duration-200 ease-out scrollbar-hide' 
     id={`graph-${item.id}`}
     ref={answerRef}
     style={{maxHeight: isOpen ? answerRef.current?.scrollHeight : 0, opacity:
       isOpen ? 1 : 0}}>
       <div className='p-4 pt-0 pb-5
-      text-gray-600 dark:text-gray-300'>
+      text-gray-600 dark:text-gray-300 scrollbar-hide'>
         <div className='p-3 rounded-lg
-        overflow-y-auto max-h-[300px]'>
+        overflow-y-auto max-h-[300px] scrollbar-hide'>
           {item.answer}
+          {children}
         </div>
 
       </div>
