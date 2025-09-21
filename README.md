@@ -1,12 +1,53 @@
-# React + Vite
+✨ Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📈 Market Index Graphs – Line charts with overlayed volume bars to track card values over time.
 
-Currently, two official plugins are available:
+🔍 Biggest Movers – Highlights cards with the most significant changes within a time window.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🗂 Subgroup Comparisons – Compare by sets, eras, or other custom categories.
 
-## Expanding the ESLint configuration
+🤖 Discord Bot Integration – Query indexes, retrieve graphs, and display data directly in Discord.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💾 Database-backed – Data is fetched, cached, and updated regularly with hourly syncs.
+
+🕸 Web Scraping – Automated with Selenium for reliable market data ingestion.
+
+🛠️ Technologies
+
+Frontend:
+
+React
+ (with Vite)
+
+Chart.js
+ + react-chartjs-2
+ for data visualization
+
+Tailwind CSS
+ for styling
+
+Backend & Data:
+
+Firebase
+ – Firestore database + hosting + auth (optional)
+
+Selenium
+ – web scraping & automated data collection
+
+External APIs for Pokémon TCG market data
+
+Infrastructure:
+
+Docker
+ for local Selenium + scraper services
+
+Nginx
+ + Cloudflare
+ for reverse proxy and security
+
+Discord Bot:
+
+discord.js
+ for bot functionality
+
+Generates and sends graphs to servers on command
