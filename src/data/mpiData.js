@@ -9,7 +9,7 @@ const mpiData = [
     id: 2,
     question: "One Piece",
     answer:
-      "One piece Market Index",
+      "One Piece Market Index",
   },
   {
     id: 3,
@@ -28,12 +28,6 @@ const mpiData = [
     question: 'Lorcana',
     answer:
       'Placeholder for the Lorcana Index.',
-  },
-  {
-    id: 6,
-    question: 'Skibidi',
-    answer:
-      'Placeholder for the Skibidi Index.',
   },
 ]
 

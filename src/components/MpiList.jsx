@@ -37,6 +37,7 @@ const MpiList = ({ toggleDarkMode, darkMode }) => {
     }
   }, [openId])
 
+  // Fetch datasets for specific indices and attach to state
   useEffect(() => {
     const loadPokemonData = async () => {
       const dataset = await fetchDataset('pkmn_index_raw')
@@ -64,6 +65,54 @@ const MpiList = ({ toggleDarkMode, darkMode }) => {
     }
 
     loadOnePieceData()
+  }, [])
+
+  useEffect(() => {
+    const loadMagicData = async () => {
+      // Path to the One Piece dataset in Firebase
+      const dataset = await fetchDataset('mtg_index_raw')
+
+      // Update state: attach dataset to item with id === 2
+      setData(prev =>
+        prev.map(item =>
+          item.id === 3 ? { ...item, data: dataset } : item
+        )
+      )
+    }
+
+    loadMagicData()
+  }, [])
+
+  useEffect(() => {
+    const loadYuGiOhData = async () => {
+      // Path to the One Piece dataset in Firebase
+      const dataset = await fetchDataset('yugioh_index_raw')
+
+      // Update state: attach dataset to item with id === 2
+      setData(prev =>
+        prev.map(item =>
+          item.id === 4 ? { ...item, data: dataset } : item
+        )
+      )
+    }
+
+    loadYuGiOhData()
+  }, [])
+
+  useEffect(() => {
+    const loadLorcanaData = async () => {
+      // Path to the One Piece dataset in Firebase
+      const dataset = await fetchDataset('lorcana_index_raw')
+
+      // Update state: attach dataset to item with id === 2
+      setData(prev =>
+        prev.map(item =>
+          item.id === 5 ? { ...item, data: dataset } : item
+        )
+      )
+    }
+
+    loadLorcanaData()
   }, [])
 
 
@@ -109,7 +158,7 @@ const MpiList = ({ toggleDarkMode, darkMode }) => {
             onClick={toggleItem}
             isOpen={expandAll || openId === item.id}
           >
-            {item.data ? <Graph dataset={item.data} /> : <p>Loading graph...</p>}
+            {item.data ? <Graph dataset={item.data} question={item.question}/> : <p>Loading graph...</p>}
           </MpiItems>
         ))}
       </div>
