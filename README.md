@@ -1,4 +1,4 @@
-# Pokémon Trading Card Index & Price Tracker
+# Trading Card Game Index & Price Tracker
 
 A web application and Discord bot for tracking Pokémon card market data, visualizing trends, and comparing sets/eras over time.
 
